@@ -13,8 +13,6 @@
 -ViewModel
 ```
 
-
-
 # mvvm light
 ```XAML
 Nuget 安装  MvvmLight
@@ -71,6 +69,33 @@ public ICommand MyCommand => new RelayCommand<string>((e) =>
 {
     //代码
 });
+```
+
+
+# Frame Navigation Service
+```XML
+在mvvm中如何实现UI跳转呢？
+使用 NavigationService
+```
+
+```C# 
+///如果需要在cs中使用需要注册
+SimpleIoc.Default.Register(() => CreateNavigationService());
+///创建导航规则
+private INavigationService CreateNavigationService()
+{
+    NavigationService navigationService = new NavigationService();
+    navigationService.Configure("login", new Uri("/DMSkin;component/View/LoginView.xaml", UriKind.Relative));
+    navigationService.Configure("main", new Uri("/DMSkin;component/View/MainView.xaml", UriKind.Relative));
+    return navigationService;
+}
+
+///如果想要在View层使用
+DataContext="{Binding Source={StaticResource Locator}}"
+
+///Window的CS代码或者ViewModel中使用
+ServiceLocator.Current.GetInstance<INavigationService>().NavigateTo("login");
+ServiceLocator.Current.GetInstance<INavigationService>().NavigateTo("main");
 ```
 
 # 其他
