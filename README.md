@@ -7,8 +7,8 @@ Nuget 安装  mvvm light
 ```
 
 # mvvm light 代码段
+#### mvvminpc 属性
 ```C#
-///mvvminpc 属性
 private bool _myProperty;
 /// <summary>
 /// 属性.
@@ -19,8 +19,8 @@ public bool MyProperty
     set { Set(ref _myProperty, value); }
 }
 ```
+#### mvvmrelay 命令
 ```C#
-///mvvmrelay 命令
 /// <summary>
 /// 命令Command
 /// </summary>
@@ -29,8 +29,8 @@ public ICommand MyCommand => new RelayCommand(() =>
     //代码
 });
 ```
+#### mvvmrelaycanexecute 命令(附带Canexecute)
 ```C#        
-///mvvmrelaycanexecute 命令(附带Canexecute)
 /// <summary>
 /// 命令Command
 /// </summary>
@@ -38,9 +38,9 @@ public ICommand MyCommand => new RelayCommand(() =>
 {
     //代码
 }, () => false);
-```        
+```
+#### mvvmrelaygeneric 命令(带参)
 ```C# 
-///mvvmrelaygeneric 命令(带参)
 /// <summary>
 /// 命令Command
 /// </summary>
