@@ -8,7 +8,17 @@ Nuget 安装  mvvm light
 
 # mvvm light 代码段
 ```C#
-mvvminpc 属性
+//mvvminpc 属性
+private bool _myProperty;
+/// <summary>
+/// 属性.
+/// </summary>
+public bool MyProperty
+{
+      get { return _myProperty; }
+      set { Set(ref _myProperty, value); }
+}
+
 mvvmrelay 命令
 mvvmrelaycanexecute 命令(附带Canexecute)
 mvvmrelaygeneric 命令(带参)
