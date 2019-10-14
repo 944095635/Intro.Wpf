@@ -18,7 +18,8 @@ public bool MyProperty
     get { return _myProperty; }
     set { Set(ref _myProperty, value); }
 }
-
+```
+```C#
 ///mvvmrelay 命令
 /// <summary>
 /// 命令Command
@@ -27,7 +28,8 @@ public ICommand MyCommand => new RelayCommand(() =>
 {
     //代码
 });
-        
+```
+```C#        
 ///mvvmrelaycanexecute 命令(附带Canexecute)
 /// <summary>
 /// 命令Command
@@ -36,9 +38,8 @@ public ICommand MyCommand => new RelayCommand(() =>
 {
     //代码
 }, () => false);
-        
-
-
+```        
+```C# 
 ///mvvmrelaygeneric 命令(带参)
 /// <summary>
 /// 命令Command
