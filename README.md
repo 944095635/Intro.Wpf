@@ -13,7 +13,7 @@
 -ViewModel
 ```
 
-# mvvm light
+# MVVM框架 mvvm light
 ```XAML
 Nuget 安装  MvvmLight
 
@@ -27,7 +27,7 @@ Nuget 安装  MvvmLight
 DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
 ```
 
-## mvvm light 代码段
+## 代码段 mvvm light
 #### mvvminpc 属性
 ```C#
 private bool _myProperty;
@@ -72,7 +72,7 @@ public ICommand MyCommand => new RelayCommand<string>((e) =>
 ```
 
 
-# Frame Navigation Service
+# 页面跳转 Frame Navigation Service
 ```XML
 在mvvm中如何实现UI跳转呢？
 使用 NavigationService
