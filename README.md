@@ -1,12 +1,32 @@
 # INTRO
 此项目专门用于保存我平时开发WPF使用库、文件等。
 
+# 项目搭建
+```XML
+.net framework 优先选择4.5+ 可以使用内置的 WindowChrome
+
+项目必要的文件夹
+-Image
+-Model
+-Style
+-View
+-ViewModel
+```
 
 
 
 # 1.0 mvvm light
 ```XML
-Nuget 安装  mvvm light 
+Nuget 安装  MvvmLight
+
+//申明ViewModel加载器
+<vm:ViewModelLocator
+                xmlns:vm="clr-namespace:AIYI.ViewModel"
+                x:Key="Locator"
+                d:IsDataSource="True" />
+
+//绑定ViewModel
+DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
 ```
 
 ## mvvm light 代码段
