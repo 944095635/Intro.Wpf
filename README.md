@@ -15,8 +15,8 @@ private bool _myProperty;
 /// </summary>
 public bool MyProperty
 {
-      get { return _myProperty; }
-      set { Set(ref _myProperty, value); }
+    get { return _myProperty; }
+    set { Set(ref _myProperty, value); }
 }
 
 ///mvvmrelay 命令
