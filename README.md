@@ -1,13 +1,13 @@
 # Intro.Wpf
 此项目专门用于保存我平时开发WPF使用库、文件等。
 
-# mvvm light
+# 1.0 mvvm light
 ```XML
 Nuget 安装  mvvm light 
 ```
 
-# mvvm light 代码段
-#### mvvminpc 属性
+# 1.1 mvvm light 代码段
+#### 1.1.1 mvvminpc 属性
 ```C#
 private bool _myProperty;
 /// <summary>
@@ -19,7 +19,7 @@ public bool MyProperty
     set { Set(ref _myProperty, value); }
 }
 ```
-#### mvvmrelay 命令
+#### 1.1.2 mvvmrelay 命令
 ```C#
 /// <summary>
 /// 命令Command
@@ -29,7 +29,7 @@ public ICommand MyCommand => new RelayCommand(() =>
     //代码
 });
 ```
-#### mvvmrelaycanexecute 命令(附带Canexecute)
+#### 1.1.3 mvvmrelaycanexecute 命令(附带Canexecute)
 ```C#        
 /// <summary>
 /// 命令Command
@@ -39,7 +39,7 @@ public ICommand MyCommand => new RelayCommand(() =>
     //代码
 }, () => false);
 ```
-#### mvvmrelaygeneric 命令(带参)
+#### 1.1.4 mvvmrelaygeneric 命令(带参)
 ```C# 
 /// <summary>
 /// 命令Command
@@ -50,7 +50,7 @@ public ICommand MyCommand => new RelayCommand<string>((e) =>
 });
 ```
 
-
+# 2.0 其他
 ```XAML
 <Application.Resources>
     <ResourceDictionary>
