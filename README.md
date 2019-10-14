@@ -15,7 +15,7 @@
 
 
 
-# 1.0 mvvm light
+# mvvm light
 ```XAML
 Nuget 安装  MvvmLight
 
@@ -30,7 +30,7 @@ DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
 ```
 
 ## mvvm light 代码段
-#### 1.1 mvvminpc 属性
+#### mvvminpc 属性
 ```C#
 private bool _myProperty;
 /// <summary>
@@ -42,7 +42,7 @@ public bool MyProperty
     set { Set(ref _myProperty, value); }
 }
 ```
-#### 1.2 mvvmrelay 命令
+#### mvvmrelay 命令
 ```C#
 /// <summary>
 /// 命令Command
@@ -52,7 +52,7 @@ public ICommand MyCommand => new RelayCommand(() =>
     //代码
 });
 ```
-#### 1.3 mvvmrelaycanexecute 命令(附带Canexecute)
+#### mvvmrelaycanexecute 命令(附带Canexecute)
 ```C#        
 /// <summary>
 /// 命令Command
@@ -62,7 +62,7 @@ public ICommand MyCommand => new RelayCommand(() =>
     //代码
 }, () => false);
 ```
-#### 1.4 mvvmrelaygeneric 命令(带参)
+#### mvvmrelaygeneric 命令(带参)
 ```C# 
 /// <summary>
 /// 命令Command
@@ -73,7 +73,7 @@ public ICommand MyCommand => new RelayCommand<string>((e) =>
 });
 ```
 
-# 2.0 其他
+# 其他
 ```XAML
 <Application.Resources>
     <ResourceDictionary>
