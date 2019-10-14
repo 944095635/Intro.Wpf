@@ -16,14 +16,14 @@
 
 
 # 1.0 mvvm light
-```XML
+```XAML
 Nuget 安装  MvvmLight
 
 //申明ViewModel加载器
 <vm:ViewModelLocator
-                xmlns:vm="clr-namespace:AIYI.ViewModel"
-                x:Key="Locator"
-                d:IsDataSource="True" />
+xmlns:vm="clr-namespace:AIYI.ViewModel"
+x:Key="Locator"
+d:IsDataSource="True" />
 
 //绑定ViewModel
 DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
