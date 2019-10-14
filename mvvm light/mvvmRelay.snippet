@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>RelayCommand</Title>
+      <Author>Laurent Bugnion (GalaSoft)</Author>
+      <Description>Creates and initializes a new RelayCommand with an Execute lambda. (V5.2.4.0)</Description>
+      <HelpUrl>http://www.mvvmlight.net</HelpUrl>
+      <Shortcut>mvvmrelay</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>commandname</ID>
+          <ToolTip>Command 名字.</ToolTip>
+          <Default>MyCommand</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+          <![CDATA[
+
+        /// <summary>
+        /// 命令Command
+        /// </summary>
+        public ICommand $commandname$ => new RelayCommand(() =>
+        {
+            //代码
+        });
+        ]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
