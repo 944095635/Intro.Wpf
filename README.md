@@ -21,32 +21,32 @@ public bool MyProperty
 
 ///mvvmrelay 命令
 /// <summary>
-        /// 命令Command
-        /// </summary>
-        public ICommand MyCommand => new RelayCommand(() =>
-        {
-            //代码
-        });
+/// 命令Command
+/// </summary>
+public ICommand MyCommand => new RelayCommand(() =>
+{
+    //代码
+});
         
 ///mvvmrelaycanexecute 命令(附带Canexecute)
 /// <summary>
-        /// 命令Command
-        /// </summary>
-        public ICommand MyCommand => new RelayCommand(() =>
-        {
-            //代码
-        }, () => false);
+/// 命令Command
+/// </summary>
+public ICommand MyCommand => new RelayCommand(() =>
+{
+    //代码
+}, () => false);
         
 
 
 ///mvvmrelaygeneric 命令(带参)
 /// <summary>
-        /// 命令Command
-        /// </summary>
-        public ICommand MyCommand => new RelayCommand<string>((e) =>
-        {
-            //代码
-        });
+/// 命令Command
+/// </summary>
+public ICommand MyCommand => new RelayCommand<string>((e) =>
+{
+    //代码
+});
 ```
 
 
