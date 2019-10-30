@@ -6,9 +6,11 @@
 .net framework 优先选择4.5+ 可以使用内置的 WindowChrome
 
 项目必要的文件夹
+-Common
 -Image
 -Model
 -Style
+-Service
 -View
 -ViewModel
 ```
@@ -89,6 +91,9 @@ private INavigationService CreateNavigationService()
     navigationService.Configure("main", new Uri("/DMSkin;component/View/MainView.xaml", UriKind.Relative));
     return navigationService;
 }
+
+///必须要在Frame中增加
+<Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
 
 ///如果想要在View层使用
 DataContext="{Binding Source={StaticResource Locator}}"
